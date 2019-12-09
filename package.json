@@ -1,0 +1,17 @@
+{
+  "name": "postgres-rtd",
+  "version": "1.0.0",
+  "description": "An example of using postgres as a real time database with",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "cd src/client && npm install && cd ../server && npm install",
+    "dev": "concurrently --names SERVER,CLIENT \"cd src/server && npm run watch\" \"cd src/client && npm run start\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^5.0.0",
+    "dotenv": "^8.2.0"
+  }
+}
